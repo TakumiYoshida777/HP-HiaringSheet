@@ -1,0 +1,17 @@
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    height: 5rem;
+
+    &__item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        input {
+            height: 2rem;
+        }
+    }
+}

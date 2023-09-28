@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/*******
+**スマホ縦**
+********/
+
+.home {
+    font-family: Arial, sans-serif;
+}
+
+.home-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+    h1 {
+        text-align: center;
+    }
+
+    .list-title {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .list {
+        list-style: none;
+        padding: 0;
+    }
+
+
+    .item {
+        margin-bottom: 10px;
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            max-height: 3rem;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    }
+
+    ul {
+        // padding-left: 20px;
+    }
+
+    .btns {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-list-item {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .required-menu-list {
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    .moremenu-item {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .strongPoint,
+    .more-request {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 10rem;
+    }
+
+    .rival-site {
+        display: grid;
+        grid-template-columns: 88% 10%;
+        gap: 2%;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+
+    .add-menu {
+        max-height: 3rem;
+    }
+
+
+}
+
+.newsiteMenu {
+    .registeredMenuContainer {
+        margin: 1rem 0;
+
+        .registeredMenu {
+
+
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    .selectedMenuContainer {
+        margin-bottom: 1rem;
+
+        .selectedMenu {
+            border-bottom: 1px solid #ccc;
+
+        }
+    }
+
+
+}
+
+
+/**********
+**スマホ縦 END**
+***********/
+/*************************** 
+スマホ縦向き iPhonePro 376px以上
+****************************/
+@media (min-width: 376px) {}
+
+/*************************** 
+スマホ縦向き 376px以上 END
+****************************/
+
+/*************************** 
+スマホ横向き 481px以上
+****************************/
+@media (min-width: 481px) {}
+
+/*************************** 
+スマホ横向き 481px以上 END
+****************************/
+/*************************** 
+タブレットの縦向き 601px以上 
+****************************/
+@media (min-width: 601px) {
+    .required-menu-list {
+        grid-auto-flow: column;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .strongPoint,
+    .more-request {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 13rem;
+    }
+
+    .home-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+}
+
+/*************************** 
+タブレットの縦向き 601px以上 END
+****************************/
+/*************************** 
+iPad Proの縦向き 1024px以上 
+****************************/
+@media (min-width: 1024px) {}
+
+/*************************** 
+タブレットの縦向き 1024px以上 END
+****************************/
+
+/*************************** 
+スマホ縦向き  360px 以下
+****************************/
+@media (max-width: 360px) {}
+
+/*************************** 
+スマホ縦向き 376px以下 END
+****************************/

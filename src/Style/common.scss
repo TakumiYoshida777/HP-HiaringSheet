@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+
+
+/*******
+**スマホ縦**
+********/
+body {
+    font-size: 12px;
+    background-image: url('../../public/b006.gif');
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px -5px #777777;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+
+
+.confirm-list {
+    .confirm-item {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        margin-bottom: 0.75rem;
+        padding: 0.25rem;
+        border-bottom: 1px solid rgb(7, 7, 7);
+    }
+
+    .confirm-item-text {
+        word-break: break-all;
+    }
+}
+
+/*** ボタン***/
+
+button {
+    max-height: 3rem;
+    height: 100%;
+    margin: 5px;
+    border: none;
+    padding: 0.25rem 1rem;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: #004792;
+    }
+
+
+}
+
+.pdfbtn,
+.login-link-btn,
+.add-btn {
+    display: inline-block;
+    max-height: 3rem;
+    height: 100%;
+    margin: 5px;
+    border: none;
+    padding: 0.25rem 1rem;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: #004792;
+    }
+}
+
+.delete-btn {
+    padding: 0;
+    background-color: #007bff;
+    width: 3rem;
+}
+
+.clear-btn {
+    background-color: #ff5246;
+
+    &:hover {
+        background-color: #bb3a31;
+    }
+}
+
+.logout-btn {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding-bottom: 5rem;
+}
+
+.btns-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*** ボタン END***/
+
+/**********
+**スマホ縦 END**
+***********/
+/*************************** 
+スマホ縦向き iPhonePro 376px以上
+****************************/
+@media (min-width: 376px) {}
+
+/*************************** 
+スマホ縦向き 376px以上 END
+****************************/
+
+/*************************** 
+スマホ横向き 481px以上
+****************************/
+@media (min-width: 481px) {}
+
+/*************************** 
+スマホ横向き 481px以上 END
+****************************/
+/*************************** 
+タブレットの縦向き 601px以上 
+****************************/
+@media (min-width: 601px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 15px -5px #777777;
+        border-radius: 10px;
+        padding: 2rem;
+    }
+
+    .delete-btn {
+
+        width: 100%;
+    }
+
+}
+
+/*************************** 
+タブレットの縦向き 601px以上 END
+****************************/
+/*************************** 
+iPad Proの縦向き 1024px以上 
+****************************/
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+
+}
+
+/*************************** 
+タブレットの縦向き 1024px以上 END
+****************************/
+
+/*************************** 
+スマホ縦向き  360px 以下
+****************************/
+@media (max-width: 360px) {}
+
+/*************************** 
+スマホ縦向き 376px以下 END
+****************************/

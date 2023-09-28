@@ -1,0 +1,17 @@
+.successMessage {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10rem;
+
+    .innerContainer {
+        text-align: center;
+        line-height: 1.5;
+        font-size: large;
+    }
+
+    .btnBlock {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+}

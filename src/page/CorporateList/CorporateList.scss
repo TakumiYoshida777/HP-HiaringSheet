@@ -1,0 +1,27 @@
+.company-list {
+    height: 10rem;
+    overflow-y: scroll;
+}
+
+
+.company-item {
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+.company-item:hover {
+    color: aquamarine;
+}
+
+.company-details {
+    .detail-item {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        margin-bottom: 0.75rem;
+        padding: 0.25rem;
+        border-bottom: 1px solid rgb(7, 7, 7);
+
+    }
+}
