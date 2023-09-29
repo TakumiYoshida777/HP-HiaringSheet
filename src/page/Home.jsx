@@ -42,8 +42,8 @@ const Home = () => {
     const [photoData, setPhotoData] = useState('有');
     const [domainData, setDomainData] = useState('有');
     const [serverData, setServerData] = useState('有');
-    const [moreMenu, setMoreMenu] = useState(['']);
-    const [competitors, setCompetitors] = useState(['']);
+    const [moreMenu, setMoreMenu] = useState(['']);//メニュー追加リスト
+    const [competitors, setCompetitors] = useState(['']);//競合サイトリスト
     // チェックボックスの状態を管理するためのuseStateフック
     const [selectedValues, setMenuSelectedValues] = useState([]);
     // SNSチェックボックスの状態を管理するためのuseStateフック
@@ -327,6 +327,7 @@ const Home = () => {
             setDeadline('');
             setBudget('');
             setOtherRequests('');
+            setStrongPoint("");
 
             // SP, デザイン, 素材画像, ドメイン, サーバーのラジオボタンの初期化
             setSpData('有');
@@ -336,8 +337,10 @@ const Home = () => {
             setServerData('有');
 
             // チェックボックスの選択解除
-            setMenuSelectedValues([]);
-            setSelectedSnsValues([]);
+            const checkBox = document.querySelectorAll("input[type=checkbox]");
+            checkBox.forEach(element => {
+                element.checked = false;
+            });
         } else {
             return;
         }

@@ -3,9 +3,13 @@ import './Management.scss';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase';
 import CorporateList from './CorporateList/CorporateList';
+import { useNavigate } from 'react-router-dom';
 
 
 const Management = () => {
+
+    const navigate = useNavigate();
+
     const emailRef = useRef(null);
     // const companyRef = useRef(null);
     // const telRef = useRef(null);
@@ -42,6 +46,11 @@ const Management = () => {
         getHearingItems();
     }, []);
 
+    const onLogoutBtn = () => {
+        localStorage.setItem("login", false);
+
+        navigate('/login');
+    };
     return (
         <div className="Management">
             <div className="searchBar">
@@ -58,6 +67,8 @@ const Management = () => {
                     <input type="tel" name="" id="" ref={telRef} />
                 </div> */}
                 <button className="btn btn-border searchBtn" onClick={(e) => searchHiaringData(e)}>検索</button>
+                <button className="btn" onClick={() => { navigate('/login'); }}>ログイン画面へ</button>
+                <button className="btn" onClick={() => { onLogoutBtn(); }}>ログアウト</button>
             </div>
             <CorporateList hiaringData={hiaringData} />
         </div>
