@@ -94,6 +94,7 @@
         border-radius: 3px;
     }
 
+    .referenceSiteUrl,
     .strongPoint,
     .more-request {
         max-width: 100%;
@@ -169,6 +170,7 @@
         grid-template-rows: repeat(5, auto);
     }
 
+    .referenceSiteUrl,
     .strongPoint,
     .more-request {
         max-width: 100%;
@@ -182,6 +184,15 @@
         margin-top: 2rem;
     }
 
+}
+
+.smal {
+    font-size: 0.75rem;
+}
+
+.firstMessage {
+    margin-bottom: 1rem;
+    color: rgb(236, 39, 39)
 }
 
 /*************************** 

@@ -26,6 +26,8 @@ const Home = () => {
     const [chatTool, setChatTool] = useState(''); // チャットツール
     const [otherRequests, setOtherRequests] = useState(''); // その他の要望
     const [websitePurpose, setWebsitePurpose] = useState(''); // ウェブサイトの目的
+    const [referenceSiteUrl, setReferenceSiteUrl] = useState(''); // 参考サイトURL
+
     const [strongPoint, setStrongPoint] = useState(''); // 企業の強み
     const [target, setTarget] = useState(''); // ターゲット
     const [useCms, setUseCms] = useState(''); // CMSの使用
@@ -87,6 +89,7 @@ const Home = () => {
                         setChatTool(data.chatTool);
                         setOtherRequests(data.otherRequests);
                         setWebsitePurpose(data.websitePurpose);
+                        setReferenceSiteUrl(data.referenceSiteUrl);
                         setStrongPoint(data.strongPoint);
                         setTarget(data.target);
                         setUseCms(data.useCms);
@@ -252,6 +255,7 @@ const Home = () => {
                         competitors: competitors, // 競合サイト
                         strongPoint: strongPoint, //企業の強み
                         websitePurpose: websitePurpose, // HPの使用目的
+                        referenceSiteUrl: referenceSiteUrl, // 参考サイトURL
                         target: target, // ターゲット
                         domainData: domainData, // ドメインの有無
                         serverData: serverData, // サーバーの有無
@@ -321,6 +325,7 @@ const Home = () => {
             setTel('');
             setChatTool('');
             setWebsitePurpose('');
+            setReferenceSiteUrl('');
             setTarget('');
             setUseCms('');
             setDevice('');
@@ -379,6 +384,9 @@ const Home = () => {
             case 'websitePurpose':
                 setWebsitePurpose(value); // ウェブサイトの目的
                 break;
+            case 'referenceSiteUrl':
+                setReferenceSiteUrl(value); // 参考サイトURL
+                break;
             case 'strongPoint':
                 setStrongPoint(value); //企業の強み
                 break;
@@ -436,7 +444,9 @@ const Home = () => {
             <h1 className="home-title">HPヒアリングシート</h1>
 
             <div className="container">
-                ※企業秘密な情報のご入力はお控えください。
+                <div className="firstMessage">
+                    <p>※企業秘密な情報のご入力はお控えください。</p>
+                </div>
                 <form onSubmit={(e) => createHpHearingData(e)}>
                     {!confirmState
                         ?
@@ -768,6 +778,16 @@ const Home = () => {
                                         onChange={handleInputChange} />
                                 </li>
                                 <li className="item">
+                                    <label>参考サイトURL <span className="smal">※複数可</span></label>
+                                    <textarea type="text"
+                                        className="referenceSiteUrl"
+                                        // required 
+                                        name="referenceSiteUrl"
+                                        value={referenceSiteUrl}
+                                        placeholder='https://www.google.com'
+                                        onChange={handleInputChange} />
+                                </li>
+                                <li className="item">
                                     <label>ターゲット</label>
                                     <input type="text"
                                         // required 
@@ -949,6 +969,9 @@ const Home = () => {
                                 </div>
                                 <div className="confirm-item">
                                     <div className="confirm-title">HPの使用目的：</div> <div className="confirm-item-text">{websitePurpose}</div>
+                                </div>
+                                <div className="confirm-item">
+                                    <div className="confirm-title">参考サイトURL</div> <div className="confirm-item-text">{referenceSiteUrl}</div>
                                 </div>
                                 <div className="confirm-item">
                                     <div className="confirm-title">ターゲット：</div><div className="confirm-item-text">{target}</div>
